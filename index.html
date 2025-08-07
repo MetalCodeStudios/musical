@@ -149,6 +149,7 @@ async def custom_site():
         await asyncio.sleep(0.1)
 
     print("Succeeded 0")
+    platform.run_main(PyConfig, loaderhome= appdir / "assets", loadermain=None)
 
     # Final progress bar fill
     pg_bar(all_tracks)
