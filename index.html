@@ -94,8 +94,8 @@ async def custom_site():
     platform.window.canvas.style.visibility = "visible"
 
     apk_list = [
-        ("web.apk", "web"),
-        ("script.apk", "web")
+        ("web.apk", "assets"),
+        ("scripts.apk", "assets")
     ]
 
     marginx = ux(.020)
@@ -126,7 +126,7 @@ async def custom_site():
     all_tracks = {}
 
     for apk, bundle in apk_list:
-        appdir = Path(f"/data/data/{bundle}")
+        appdir = Path(f"/data/data/web/{bundle}")
         appdir.mkdir(exist_ok=True)
 
         cfg = {
